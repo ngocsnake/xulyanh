@@ -6,8 +6,54 @@
     .btn {
         text-align: left;
     }
+
+    .menu {
+        position: relative;
+        height: 100%;
+    }
+
+    .donate {
+        position: absolute;
+        bottom: 0;
+    }
 </style>
+<script>
+    function playSong(i) {
+        var audio = document.getElementById("myAudio");
+        audio.src = `/song/${i}.mp3`;
+        audio.play();
+    }
+    function show() {
+        const button = document.querySelector('#nich');
+
+        if (button.innerText == 'i say A-B-C-D-E') {
+            playSong(1);
+            setTimeout(function () {
+                const r = confirm("Fuck up in the night can't believe what we see");
+                if (r == true) {
+                    playSong(2);
+                    setTimeout(function () {
+                        button.innerHTML = '<i class="fas fa-mouse"></i>L-S-D-M-T-H-C'
+                    }, 3870);
+                }
+            }, 2777);
+        }
+        else {
+            playSong(3);
+            setTimeout(function () {
+                const r = confirm("Push me to the sky with a great fantasy (God damn)");
+                if (r == true) {
+                    playSong(4);
+                    setTimeout(function () {
+                        button.innerHTML = '<i class="fas fa-mouse"></i>i say A-B-C-D-E'
+                    }, 4200);
+                }
+            }, 3200);
+        }
+    }
+</script>
 <div class="menu d-flex flex-column">
+    <audio id="myAudio" src="" type="audio/mpeg"></audio>
     <a href="/">
         <button class="btn btn-success" style="width:100%">
             <i class="fas fa-home"></i>Trang Chủ</button>
@@ -37,4 +83,8 @@
             <i class="fas fa-hand-holding-usd"></i>Sobeo
         </button>
     </a>
+
+    <button id="nich" class="btn donate" style="width:100%; background-color: #F0BD30" onclick="show()">
+        <i class="fas fa-music"></i>i say A-B-C-D-E
+    </button>
 </div>
