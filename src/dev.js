@@ -7,7 +7,7 @@ const route = require('./routes');
 const app = express();
 
 const port = 3004;
-app.listen(process.env.PORT)
+app.listen(port)
 
 
 
@@ -32,6 +32,29 @@ app.use(express.urlencoded({
 app.use(express.json());
 
 
+console.log(`===========> http://localhost:${port}/`);
+
+
+
+
+/////////////////////////////////////////////////////////////
+// auto exec nmp run watch khi chạy start app
+
+var spawn = require("child_process").spawn,
+    child;
+child = spawn("powershell.exe", ["npm run watch"]);
+child.stdout.on("data", function(data) {
+    console.log("Powershell Data: " + data);
+});
+child.stderr.on("data", function(data) {
+    console.log("Powershell Errors: " + data);
+});
+child.on("exit", function() {
+    console.log("Powershell Script finished");
+});
+child.stdin.end();
+
+/////////////////////////////////////////////////////////////////
 
 //Route init
 route(app);
