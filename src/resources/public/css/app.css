@@ -1,0 +1,25 @@
+.d-flex{
+  gap: 15px;
+}
+.input-group{
+  max-width: 170px;
+}
+.arrayImg{
+  max-width: 50px;
+}
+.ketqua{
+  font-size: 18px;
+  text-align: center;
+  color: #3D7EDD;
+  width: 50px;
+  display: inline-block;
+}
+.red{
+  color: red;
+}
+h3,h4{
+  color: orange;
+}
+input{
+  border-radius: 5px;
+}

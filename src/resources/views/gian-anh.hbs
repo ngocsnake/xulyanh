@@ -1,0 +1,19 @@
+<form class="d-flex justify-content-between" action="/gian-anh" method="POST">
+    <div class="d-flex">
+        <div class="input-group">
+            <span class="input-group-text">X</span>
+            <input type="text" class="form-control" placeholder="Chiều dài X" name="X">
+        </div>
+        <div class="input-group">
+            <span class="input-group-text">Y</span>
+            <input type="text" class="form-control" placeholder="Chiều dài Y" name="Y">
+        </div>
+        <button type="submit" class="btn btn-primary">Sinh Ma Trận</button>
+    </div>
+</form>
+<form action="/gian-anh/ket-qua" class="mt-4" method="POST">
+    <input type="text" value="{{{X}}}" name="X" style="display: none;">
+    {{{htmls}}}
+    {{{arrayS}}}
+</form>
+    {{{result}}}
