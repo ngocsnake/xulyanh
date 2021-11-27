@@ -31,6 +31,25 @@ class ChuanHoa {
     nhanTichChap(maTranAnh, H, X) {
         let iH = [];
         let z = 0;
+        for (let i = 0; i < maTranAnh.length - X; i++) {
+            z++;
+            if (z == (X)) {
+                z = 0;
+                continue;
+            }
+            let giaTriMoi =
+                maTranAnh[i] * H[0] +
+                maTranAnh[i + 1] * H[1] +
+                maTranAnh[i + X] * H[2] +
+                maTranAnh[i + X + 1] * H[3]
+
+            iH.push(giaTriMoi);
+        }
+        return iH;
+    }
+    nhanTichChap2(maTranAnh, H, X) {
+        let iH = [];
+        let z = 0;
         for (let i = 0; i < maTranAnh.length - 2 * X; i++) {
             z++;
             if (z == (X - 1)) {
@@ -49,12 +68,27 @@ class ChuanHoa {
                 maTranAnh[i + X + X + 1] * H[7] +
                 maTranAnh[i + X + X + 2] * H[8];
 
-            console.log(giaTriMoi);
             iH.push(giaTriMoi);
         }
         return iH;
     }
     arrayToHtmls(arr, X) {
+        let htmls = '';
+        for (let i = 0; i < arr.length; i++) {
+            const element = arr[i];
+            if (i % (X - 1) == 0 && i != 0) {
+                htmls += '<span class="ketqua">*</span><br>'
+            }
+            htmls += `<span class="ketqua">${element}</span>`
+        }
+        htmls += `<span class="ketqua">*</span><br>`
+
+        for (let i = 0; i < X; i++) {
+            htmls += '<span class="ketqua">*</span>'
+        }
+        return htmls;
+    }
+    arrayToHtmls2(arr, X) {
         let htmls = '';
         for (let i = 0; i < arr.length; i++) {
             const element = arr[i];
