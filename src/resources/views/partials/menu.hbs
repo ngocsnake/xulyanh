@@ -18,8 +18,11 @@
     }
 </style>
 <script>
-    function show2(){
+    function show2() {
         document.getElementById("myAudio").play();
+    }
+    function msg(msg) {
+        alert(msg);
     }
     function playSong(i) {
         var audio = document.getElementById("myAudio");
@@ -71,6 +74,12 @@
             <i class="fal fa-search-minus"></i>Co Ảnh
         </button>
     </a>
+    <button class="btn btn-success" style="width:100%" onclick="msg('Mở ảnh là co ảnh rồi giãn ảnh')">
+        <i class="fal fa-expand"></i>Mở Ảnh
+    </button>
+    <button class="btn btn-success" style="width:100%"  onclick="msg('Đóng ảnh là giãn ảnh rồi co ảnh')">
+        <i class="fal fa-compress"></i>Đóng Ảnh
+    </button>
     <a href="/robert">
         <button class="btn btn-success" style="width:100%">
             <i class="fal fa-registered"></i>Robert
@@ -84,6 +93,16 @@
     <a href="/tat-ca">
         <button class="btn btn-success" style="width:100%">
             <i class="fas fa-hand-holding-usd"></i>Sobeo
+        </button>
+    </a>
+    <a href="/histogram">
+        <button class="btn btn-success" style="width:100%">
+            <i class="far fa-heading"></i>Histogram
+        </button>
+    </a>
+    <a href="/can-bang-tu-dong">
+        <button class="btn btn-success" style="width:100%">
+            <i class="fas fa-balance-scale"></i>Cân Bằng Tự Động
         </button>
     </a>
 

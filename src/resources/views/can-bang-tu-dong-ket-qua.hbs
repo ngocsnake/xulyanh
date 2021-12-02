@@ -1,0 +1,65 @@
+<style>
+    th,
+    td {
+        text-align: center;
+    }
+</style>
+<h4>Ta cần tính</h4>
+<h5>- h(g): Số điểm ảnh có giá trị g của ảnh</h5>
+<h5>- t(g): Số điểm ảnh có mức xám ≤ g</h5>
+<h4>Momen quán tính trung bình có mức xám ≤ g là: </h4>
+<img src="/img/momen.png">
+<h4>f(g) được tính theo công thức: </h4>
+<img src="/img/fg.png">
+<br><br>
+<h4>Từ ảnh I ta có bảng sau:</h4>
+<table class="table table-dark">
+    <tbody>
+        <tr>
+            <th scope="row">g</th>
+            {{#each outputArray}}
+            <td>{{this.g}}</td>
+            {{/each}}
+        </tr>
+        <tr>
+            <th scope="row">h(g)</th>
+            {{#each outputArray}}
+            <td>{{this.hg}}</td>
+            {{/each}}
+        </tr>
+        <tr>
+            <th scope="row">t(g)</th>
+            {{#each outputArray}}
+            <td>{{this.tg}}</td>
+            {{/each}}
+        </tr>
+        <tr>
+            <th scope="row">g * h(g)</th>
+            {{#each outputArray}}
+            <td>{{this.ghg}}</td>
+            {{/each}}
+        </tr>
+        <tr>
+            <th scope="row">
+                <img src="/img/omega.png">
+            </th>
+            {{#each outputArray}}
+            <td>{{this.omega}}</td>
+            {{/each}}
+        </tr>
+        <tr>
+            <th scope="row">m(g)</th>
+            {{#each outputArray}}
+            <td>{{this.mg}}</td>
+            {{/each}}
+        </tr>
+        <tr>
+            <th scope="row">f(g)</th>
+            {{#each outputArray}}
+            <td>{{{this.fg}}}</td>
+            {{/each}}
+        </tr>
+    </tbody>
+</table>
+<br>
+<h4>{{{htmlsOutput}}}</h4>

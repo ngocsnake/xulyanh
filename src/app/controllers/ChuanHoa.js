@@ -1,4 +1,33 @@
+Object.defineProperties(Array.prototype, {
+    count: {
+        value: function(query) {
+            /* 
+               Counts number of occurrences of query in array, an integer >= 0 
+               Uses the javascript == notion of equality.
+            */
+            var count = 0;
+            for (let i = 0; i < this.length; i++)
+                if (this[i] == query)
+                    count++;
+            return count;
+        }
+    }
+});
 class ChuanHoa {
+    math(str) {
+        return Function(`"use strict";return (${str})`)()
+    }
+    sort_unique(arr) {
+        if (arr.length === 0) return arr;
+        arr = arr.sort(function(a, b) { return a * 1 - b * 1; });
+        var ret = [arr[0]];
+        for (var i = 1; i < arr.length; i++) { //Start loop at 1: arr[0] can never be a duplicate
+            if (arr[i - 1] !== arr[i]) {
+                ret.push(arr[i]);
+            }
+        }
+        return ret;
+    }
     xetNguong(arr, nguong) {
         const result = [];
         for (let i = 0; i < arr.length; i++) {
@@ -107,6 +136,19 @@ class ChuanHoa {
         }
         return htmls;
     }
+
+    arrayToHtmls3(arr, X) {
+        let htmls = '';
+        for (let i = 0; i < arr.length; i++) {
+            const element = arr[i];
+            htmls += `<span class="ketqua">${element}</span>`
+            if ((i + 1) % X == 0 && i != 0) {
+                htmls += '<br>'
+            }
+        }
+        return htmls;
+    }
+
     getNewArray(oldArray, X) {
         const arrayImg = oldArray;
         let newArrayImg = [];
@@ -140,6 +182,16 @@ class ChuanHoa {
             d == 7 ? +X :
             +X + 1;
 
+    }
+    lamMoiMaTran(arr, rule) {
+        const maTranMoi = [];
+        arr.forEach(element => {
+            const found = rule.find(l => {
+                return l.old == element
+            });
+            maTranMoi.push(found.new)
+        });
+        return maTranMoi
     }
 }
 

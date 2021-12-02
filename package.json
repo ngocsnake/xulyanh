@@ -26,6 +26,7 @@
         "mysql": "^2.18.1",
         "node-fetch": "^2.6.1",
         "npm-git-install": "^0.3.0",
+        "os": "^0.1.2",
         "request": "^2.88.2"
     },
     "devDependencies": {

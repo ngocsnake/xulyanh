@@ -1,0 +1,60 @@
+<style>
+    th,
+    td {
+        text-align: center;
+    }
+</style>
+<h4>Ta cần tính</h4>
+<h5>- TB: Số điểm ảnh trung bình của mỗi mức xám</h5>
+<h5>- h(g): Số điểm ảnh có giá trị g của ảnh</h5>
+<h5>- t(g): Số điểm ảnh có mức xám ≤ g</h5>
+<h5>- f(g): Giá trị mới của g</h5>
+<h4>Từ ảnh I ta có bảng sau:</h4>
+<table class="table table-dark">
+    <tbody>
+        <tr>
+            <th scope="row">g</th>
+            {{#each outputArray}}
+            <td>{{this.g}}</td>
+            {{/each}}
+        </tr>
+        <tr>
+            <th scope="row">h(g)</th>
+            {{#each outputArray}}
+            <td>{{this.hg}}</td>
+            {{/each}}
+        </tr>
+        <tr>
+            <th scope="row">t(g)</th>
+            {{#each outputArray}}
+            <td>{{this.tg}}</td>
+            {{/each}}
+        </tr>
+        <tr>
+            <th scope="row">f(g)</th>
+            {{#each outputArray}}
+            <td>{{this.fg}}</td>
+            {{/each}}
+        </tr>
+    </tbody>
+</table>
+<br>
+<h4>Ma trận I_kq sau khi đã cân bằng:</h4>
+
+<style>
+    .matran{
+        align-items: center;
+    }
+</style>
+<div class="matran d-flex">
+    <div class="matrancu">
+        <h5>Ma trận I:</h5>
+        {{{maTranCu}}}
+    </div>
+    <h4>→</h4>
+    <div class="matranmoi">
+        <h5>Ma trận I_kq:</h5>
+        {{{maTranMoiHtmls}}}
+    </div>
+</div>
+<br><br><br>

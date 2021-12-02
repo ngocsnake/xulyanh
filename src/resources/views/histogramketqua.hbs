@@ -1,0 +1,57 @@
+<style>
+    th,
+    td {
+        text-align: center;
+    }
+</style>
+<h3>Xác suất xuất hiện các điểm ảnh trong ma trận I là:</h3>
+<table class="table table-dark">
+    <tbody>
+        <tr>
+            <th scope="row">i</th>
+            {{#each outputArray}}
+            <td>{{this.num}}</td>
+            {{/each}}
+        </tr>
+        <tr>
+            <th scope="row">ni</th>
+            {{#each outputArray}}
+            <td>{{this.count}}</td>
+            {{/each}}
+        </tr>
+        <tr>
+            <th scope="row">P(ri)</th>
+            {{#each outputArray}}
+            <td>{{this.pri}}</td>
+            {{/each}}
+        </tr>
+    </tbody>
+</table>
+<br>
+<h3>Tính các S_k theo công thức:</h3>
+<img src="/img/congthucsk.png"></img>
+<br>
+<br>
+{{#each outputArray}}
+<h5>{{{this.s}}}</h5>
+{{/each}}
+<br>
+<h4>Ma trận I_kq sau khi đã cân bằng:</h4>
+
+<style>
+    .matran{
+        align-items: center;
+    }
+</style>
+<div class="matran d-flex">
+    <div class="matrancu">
+        <h5>Ma trận I:</h5>
+        {{{maTranCu}}}
+    </div>
+    <h4>→</h4>
+    <div class="matranmoi">
+        <h5>Ma trận I_kq:</h5>
+        {{{maTranMoiHtmls}}}
+    </div>
+</div>
+<br><br><br>

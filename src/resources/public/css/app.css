@@ -1,25 +1,40 @@
-.d-flex{
-  gap: 15px;
+* {
+    font-family: 'Times New Roman', Times, serif;
 }
-.input-group{
-  max-width: 170px;
+
+.d-flex {
+    gap: 15px;
 }
-.arrayImg{
-  max-width: 50px;
+
+.input-group {
+    max-width: 170px;
 }
-.ketqua{
-  font-size: 18px;
-  text-align: center;
-  color: #3D7EDD;
-  width: 50px;
-  display: inline-block;
+
+.arrayImg {
+    max-width: 50px;
 }
-.red{
-  color: red;
+
+.ketqua {
+    font-size: 18px;
+    text-align: center;
+    color: #3D7EDD;
+    width: 50px;
+    display: inline-block;
 }
-h3,h4{
-  color: orange;
+
+.red {
+    color: red;
 }
-input{
-  border-radius: 5px;
+
+h3,
+h4 {
+    color: orange;
+}
+
+input {
+    border-radius: 5px;
+}
+
+h5 {
+    color: white;
 }
